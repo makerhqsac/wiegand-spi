@@ -10,7 +10,7 @@ OBJECTS    = main.o
 BUILD_DIR  = build
 
 # Use this to calcuate fuses: http://www.engbedded.com/fusecalc/
-FUSES      = -U hfuse:w:0xDF:m -U lfuse:w:0x62:m
+FUSES      = -U hfuse:w:0x5F:m -U lfuse:w:0x62:m
 
 AVRDUDE = avrdude $(PROGRAMMER) -p $(DEVICE)
 COMPILE = avr-gcc -Wall -Os -DF_CPU=$(CLOCK) -mmcu=$(DEVICE)
